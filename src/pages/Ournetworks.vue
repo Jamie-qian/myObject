@@ -1,11 +1,9 @@
 <template>
     <div class="carousel">
         <c-slider></c-slider>
-        <c-btn v-on:btnClickEvent="doSthOne" msg="确定" class="btn">
-            <img slot="icon" src="../static/img/android.png">
+        <c-btn v-on:btnClickEvent="doSthOne" msg="确定">
         </c-btn>
-        <c-btn v-on:btnClickEvent="doSthTwo" msg="取消" class="btn">
-            <img slot="icon" src="../static/img/android.png">
+        <c-btn v-on:btnClickEvent="doSthTwo" msg="取消">
         </c-btn>
     </div>
 </template>
@@ -25,11 +23,5 @@
 <style scoped lang="scss">
 .carousel{
     margin-top:40px;
-    .text{
-        position:absolute;
-        top:50%;
-        left:20%;
-        color: #999;
-    }
 }
 </style>

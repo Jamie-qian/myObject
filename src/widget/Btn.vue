@@ -1,7 +1,6 @@
 <template>
     <div>
         <button @click="btnClickEvent">
-            <!--<slot name="icon"></slot>-->
             <span>{{msg}}</span>
         </button>
     </div>
