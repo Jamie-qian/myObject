@@ -13,32 +13,38 @@ git clone https://github.com/Jamie-qian/myObject.git
 
 ```
 
-### install dependencies
+
 安装依赖模块
 ```
 npm install
 ```
-### serve with hot reload at localhost:8080
+
 启动服务
 ```
 npm run dev
 ```
-### build for production with minification
+
 打包发布
 ```
 npm run build
 ```
 ### build for production and view the bundle analyzer report
+```
 npm run build --report
-
+```
 ### run unit tests
+```
 npm run unit
+```
 
 ### run e2e tests
+```
 npm run e2e
-
+```
 ### run all tests
+```
 npm test
+```
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
