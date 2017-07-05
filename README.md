@@ -4,14 +4,25 @@
 
 ## Build Setup
 
-``` bash
+### 安装
+
+项目地址：（使用`git clone`）
+
+```shell
+git clone https://github.com/Jamie-qian/myObject.git
+
+```
+
 # install dependencies
+安装依赖模块
 npm install
 
 # serve with hot reload at localhost:8080
+启动服务
 npm run dev
 
 # build for production with minification
+打包发布
 npm run build
 
 # build for production and view the bundle analyzer report
