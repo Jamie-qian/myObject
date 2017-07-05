@@ -13,28 +13,31 @@ git clone https://github.com/Jamie-qian/myObject.git
 
 ```
 
-# install dependencies
+### install dependencies
 安装依赖模块
+```
 npm install
-
-# serve with hot reload at localhost:8080
+```
+### serve with hot reload at localhost:8080
 启动服务
+```
 npm run dev
-
-# build for production with minification
+```
+### build for production with minification
 打包发布
+```
 npm run build
-
-# build for production and view the bundle analyzer report
+```
+### build for production and view the bundle analyzer report
 npm run build --report
 
-# run unit tests
+### run unit tests
 npm run unit
 
-# run e2e tests
+### run e2e tests
 npm run e2e
 
-# run all tests
+### run all tests
 npm test
 ```
 
