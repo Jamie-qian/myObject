@@ -7,15 +7,15 @@
             <c-header></c-header>
             <router-view></router-view>
         </div>
-        
+        <c-footer></c-footer>
     </div>
+    
 </template>
 <script>
 export default {
-    name: 'app',
+    name: 'app'
 }
 </script>
-
 <style lang="scss" scope>
     *{margin:0;padding:0;font-size:14px;}
     #app{

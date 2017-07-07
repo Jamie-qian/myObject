@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+    name:'btn',
     props: {
         msg: {
           default: '下载'
