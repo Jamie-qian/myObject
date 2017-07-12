@@ -1,13 +1,17 @@
 <template>
     <div class="header">
-        <a :href="item.src" v-for="(item,index) in items" :class="[item.active ? 'activeClass' : '']" @click="navClickEvent(items,index)">
+        <a 
+            v-for="(item,index) in items" 
+            :class="[item.active ? 'activeClass' : '']" 
+            :href="item.src"
+            @click="navClickEvent(items,index)">
             <span>{{item.text}}</span>
         </a>
     </div>
 </template>
 <script>
 export default {
-    name:'header',
+    name: 'header',
     data() {
         return {
             items: [
@@ -56,6 +60,7 @@ export default {
                 el.active = false;
             })
             items[index].active = true;
+            /*开放用户自定义的接口*/
             this.$emit('navClickEvent',items,index);
         }
     }

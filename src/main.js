@@ -3,7 +3,6 @@
  *  @author     Jamie
  **/
 
-
 import Vue from 'vue'
 /*引入App这个组件*/
 import App from './App'                          
@@ -17,14 +16,12 @@ import slider from './widget/slider.vue'
 import btn from './widget/btn.vue'
 import transfer from './widget/transfer.vue'
 import collapse from './widget/collapse'
-import footer from './widget/footer'
 
 Vue.component('c-transfer',transfer)
 Vue.component('c-header',header)
 Vue.component('c-slider',slider)
 Vue.component('c-btn',btn)
 Vue.component('c-collapse',collapse)
-Vue.component('c-footer',footer)
 
 Vue.use(ElementUI)
 

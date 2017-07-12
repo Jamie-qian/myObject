@@ -7,7 +7,6 @@
             <c-header></c-header>
             <router-view></router-view>
         </div>
-        <c-footer></c-footer>
     </div>
     
 </template>

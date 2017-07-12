@@ -1,27 +1,13 @@
 <template>
-    <div class="carousel">
-        <c-slider></c-slider>
-        <c-btn v-on:btnClickEvent="doSthOne" msg="确定">
-        </c-btn>
-        <c-btn v-on:btnClickEvent="doSthTwo" msg="取消">
-        </c-btn>
-    </div>
+    <div class="ournetworks"></div>
 </template>
 <script>
     export default {
-        name:'ournetworks',
-        methods: {
-            doSthOne () {
-              alert('确定')
-            },
-            doSthTwo () {
-              alert('取消')
-            }
-        }
+        name:'ournetworks'
     }
 </script>
 <style scoped lang="scss">
-.carousel{
+.ournetworks{
     margin-top:30px;
 }
 </style>

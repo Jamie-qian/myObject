@@ -8,10 +8,10 @@ export default new Router({
     routes: [
         { path: '/',name: 'index',component: require('../pages/index.vue')},
         { path: '/whoweare',name: 'whoweare',component: require('../pages/whoweare.vue')},
-        { path: '/ournetworks',name: 'ournetworks',component: require('../pages/ournetworks')},
+        { path: '/ournetworks',name: 'ournetworks',component: require('../pages/ournetworks.vue')},
         { path: '/media',name: 'media',component:require('../pages/media.vue')},
         { path: '/csr',name: 'csr',component:require('../pages/csr.vue')},
-        { path: '/ourpeople',name: 'ourpeople',component:require('../pages/ourpeople')},
+        { path: '/ourpeople',name: 'ourpeople',component:require('../pages/ourpeople.vue')},
         { path: '/contact',name: 'contact',component:require('../pages/contact.vue')}
     ]
 })

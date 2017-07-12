@@ -18,7 +18,7 @@
                     data.push({
                         key: i,
                         label: `备选项 ${ i }`,
-                        // disabled: i % 4 === 0
+                        disabled: i % 4 === 0
                     })
                 }
                 return data;
