@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel">
+    <div class="index">
         <c-slider></c-slider>
     </div>
 </template>
@@ -9,7 +9,7 @@
     }
 </script>
 <style scoped lang="scss">
-.carousel{
-    margin-top:40px;
+.index{
+    margin-top:30px;
 }
 </style>

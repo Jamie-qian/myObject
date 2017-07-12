@@ -10,6 +10,6 @@
 </script>
 <style scoped lang="scss">
 .csr{
-    margin-top:40px;
+    margin-top:30px;
 }
 </style>

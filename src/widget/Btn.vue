@@ -1,8 +1,8 @@
 <template>
     <div>
-        <button @click="btnClickEvent">
+        <el-button @click="btnClickEvent">
             <span>{{msg}}</span>
-        </button>
+        </el-button>
     </div>
 </template>
 <script>
@@ -14,7 +14,7 @@ export default {
         }
     },
     methods: {
-        btnClickEvent: function () {
+        btnClickEvent(){
             alert('先弹出默认的文案')
             this.$emit('btnClickEvent')
         }

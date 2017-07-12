@@ -10,5 +10,5 @@
     }
 </script>
 <style scoped lang="scss">
-    .contact{width:800px;margin-top:30px;margin-left:80px;}
+    .contact{margin-top:30px;}
 </style>
