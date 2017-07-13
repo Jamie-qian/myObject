@@ -1,5 +1,8 @@
 <template>
-    <div class="ournetworks"></div>
+    <div class="ournetworks">
+        <c-product></c-product>
+        <c-cart></c-cart>
+    </div>
 </template>
 <script>
     export default {
