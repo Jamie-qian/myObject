@@ -23,12 +23,12 @@ export default {
                 {
                     text: 'WHO WE ARE',
                     active: false,
-                    src:'#/whoweare'
+                    src:'#/weare'
                 },
                 {
                     text: 'OUR NETWORKS',
                     active: false,
-                    src:'#/ournetworks'
+                    src:'#/networks'
                 },
                 {
                     text: 'MEDIA',
@@ -43,7 +43,7 @@ export default {
                 {
                     text: 'OUR PEOPLE',
                     active: false,
-                    src:'#/ourpeople'
+                    src:'#/people'
                 },
                 {
                     text: 'CONTACT',
