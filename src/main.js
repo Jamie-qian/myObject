@@ -9,7 +9,6 @@ import router from './router/router'
 import store from './vuex/store.js'
 
 import header from './widget/header'
-import slider from './widget/slider'
 import btn from './widget/btn'
 import transfer from './widget/transfer'
 import collapse from './widget/collapse'
@@ -18,7 +17,6 @@ import product from './widget/product'
 
 Vue.component('c-transfer',transfer)
 Vue.component('c-header',header)
-Vue.component('c-slider',slider)
 Vue.component('c-btn',btn)
 Vue.component('c-collapse',collapse)
 Vue.component('c-cart',cart)

@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <c-slider></c-slider>
+        
     </div>
 </template>
 <script>

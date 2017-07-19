@@ -1,16 +1,16 @@
 <template>
-    <div class="ournetworks">
+    <div class="networks">
         <c-product></c-product>
         <c-cart></c-cart>
     </div>
 </template>
 <script>
     export default {
-        name:'ournetworks'
+        name:'networks'
     }
 </script>
 <style scoped lang="scss">
-.ournetworks{
+.networks{
     margin-top:30px;
 }
 </style>

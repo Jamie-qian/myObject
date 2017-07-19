@@ -1,5 +1,5 @@
 <template>
-    <div class="product">
+    <div class='product'>
          <table>
             <caption>产品列表</caption>
             <thead>
@@ -11,28 +11,26 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item in products">
+                <tr v-for='item in products'>
                     <td>{{item.title}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.inventory}}</td>
                     <td>
-                        <button>购买</button>
+                        <button @click='addToCart(item)'>购买</button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div>
-            <p>总价</p>
-            <p>
-                <button>去付款</button>
-            </p>
-            <p>提示：</p>
-        </div>
     </div>
 </template>
 <script>
-    import { mapGetters } from 'vuex'
+    import { mapGetters,mapActions } from 'vuex'
     export default {
+        methods:{
+            ...mapActions({
+                addToCart: 'addToCart'
+            })
+        },
         computed: {
             //mapGetters辅助函数是将store中的getters映射到局部计算属性
             ...mapGetters({  //使用对象展开符将getters混入computed中 
@@ -42,7 +40,6 @@
         created() {
             //调用actions
             this.$store.dispatch('getAllProducts')
-            
         }
     }
 </script>

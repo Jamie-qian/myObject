@@ -1,5 +1,5 @@
 <template>
-    <div class="whoweare">
+    <div class="weare">
         <c-btn v-on:btnClickEvent="doSthOne" msg="确定">
             <img slot="icon" src="../static/img/logo.png" class="icon"/>
         </c-btn>
@@ -10,7 +10,7 @@
 </template>
 <script>
     export default {
-        name:'whoweare',
+        name:'weare',
         methods: {
             /*父组件给不同的子组件调用不同的事件处理*/
             doSthOne () {
@@ -23,7 +23,7 @@
     }
 </script>
 <style scoped lang="scss">
-.whoweare{
+.weare{
     margin-top:30px;
     .icon{
         width:10px;

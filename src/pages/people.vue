@@ -1,15 +1,15 @@
 <template>
-    <div class="ourpeople">
+    <div class="people">
         <c-collapse></c-collapse>
     </div>
 </template>
 <script>
     export default {
-        name:'ourpeople'
+        name:'people'
     }
 </script>
 <style scoped lang="scss">
-.ourpeople{
+.people{
     margin-top:30px;
 }
 </style>
