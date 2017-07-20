@@ -11,10 +11,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr v-for='item in products'>
+                    <td>{{item.title}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.num}}</td>
                     <td>
                         <button>删除</button>
                     </td>
@@ -30,6 +30,22 @@
         </div>
     </div>
 </template>
+<script>
+    import { mapGetters,mapActions } from 'vuex'
+    export default {
+        methods:{
+            ...mapActions({
+                
+            })
+        },
+        computed:{
+            ...mapGetters({
+                products: 'cartProducts'
+            })
+        }
+    }
+</script>
+
 <style scoped lang="scss">
     .cart {
         table {

@@ -12,16 +12,10 @@ const getAllProducts = function(store,payLoad) {
 //调用增加购物车商品列方法的action
 const addToCart = function(store,payLoad){
     const commit = store.commit;
-    console.log(payLoad.inventory)
     //库存大于0时调用
     if(payLoad.inventory > 0){
         commit('add_to_cart',payLoad);
-
-    }
-    
-    
-
-    
+    }   
 }
  
 export default {
