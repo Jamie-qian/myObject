@@ -16,7 +16,7 @@
                     <td>{{item.price}}</td>
                     <td>{{item.inventory}}</td>
                     <td>
-                        <button @click='addToCart(item)'>购买</button>
+                        <el-button @click='addToCart(item)'>购买</el-button>
                     </td>
                 </tr>
             </tbody>
@@ -52,9 +52,6 @@
             td{
                 text-align: center;
             }
-        }
-        button {
-            padding:5px 10px;
         }
     }
 </style>

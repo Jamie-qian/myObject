@@ -3,22 +3,32 @@ import products_data from '../api/productsData.js'
  
 //调用获取商品列表方法的action
 const getAllProducts = function(store,payLoad) {
-    const commit = store.commit;
     products_data.getProductsData(function(payLoad){
-        commit("receive_product",payLoad);  //actions  commit-> mutations
+        store.commit("receive_product",payLoad)  //actions  commit-> mutations
     })
 }
 
-//调用增加购物车商品列方法的action
+//调用添加购物车商品列方法的action
 const addToCart = function(store,payLoad){
-    const commit = store.commit;
     //库存大于0时调用
     if(payLoad.inventory > 0){
-        commit('add_to_cart',payLoad);
+        store.commit('add_to_cart',payLoad)
     }   
 }
- 
+
+const deleteCartProduct = function(store,payLoad){
+    if(payLoad.num > 0 ){
+        store.commit('delete_cart_product',payLoad)
+    }
+}
+
+const submitCart = function(store,){
+    store.commit('submit_cart_product')
+}
+
 export default {
     getAllProducts,
-    addToCart
+    addToCart,
+    deleteCartProduct,
+    submitCart
 } 

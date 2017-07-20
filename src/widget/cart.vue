@@ -16,17 +16,17 @@
                     <td>{{item.price}}</td>
                     <td>{{item.num}}</td>
                     <td>
-                        <button>删除</button>
+                        <el-button @click="deleteCartProduct(item)">删除</el-button>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div>
-            <p>总价</p>
+        <div class='message'>
+            <p>总价: {{allprice}}</p>
             <p>
-                <button>去付款</button>
+                <el-button @click="submitCart">去付款</el-button>
             </p>
-            <p>提示：</p>
+            <p>提示：{{messageInfo}}</p>
         </div>
     </div>
 </template>
@@ -35,12 +35,15 @@
     export default {
         methods:{
             ...mapActions({
-                
+                deleteCartProduct: 'deleteCartProduct',
+                submitCart: 'submitCart'
             })
         },
         computed:{
             ...mapGetters({
-                products: 'cartProducts'
+                products: 'cartProducts',
+                allprice: 'allprice',
+                messageInfo: 'messageInfo'
             })
         }
     }
@@ -56,8 +59,11 @@
                 text-align: center;
             }
         }
-        button {
-            padding:5px 10px;
+        .message {
+            text-align: right;
+            p {
+                margin-top:10px;
+            }
         }
     }
 </style>
