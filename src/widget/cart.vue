@@ -16,7 +16,10 @@
                     <td>{{item.price}}</td>
                     <td>{{item.num}}</td>
                     <td>
-                        <el-button @click="deleteCartProduct(item)">删除</el-button>
+                        <el-button @click="deleteCartProduct(item)">
+                            删除
+                            <img src="../static/img/logo.png" class='icon'/>
+                        </el-button>
                     </td>
                 </tr>
             </tbody>
@@ -24,7 +27,11 @@
         <div class='message'>
             <p>总价: {{allprice}}</p>
             <p>
-                <el-button @click="submitCart">去付款</el-button>
+                <el-button @click="submitCart">
+                    <img src="../static/img/logo.png" class='icon'/>
+                    去付款
+                    <img src="../static/img/logo.png" class='icon'/>
+                </el-button>
             </p>
             <p>提示：{{messageInfo}}</p>
         </div>
@@ -64,6 +71,9 @@
             p {
                 margin-top:10px;
             }
+        }
+        .icon{
+            width:10px;
         }
     }
 </style>

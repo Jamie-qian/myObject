@@ -16,7 +16,10 @@
                     <td>{{item.price}}</td>
                     <td>{{item.inventory}}</td>
                     <td>
-                        <el-button @click='addToCart(item)'>购买</el-button>
+                        <el-button @click='addToCart(item)'>
+                            <img src="../static/img/logo.png" class='icon'/>
+                            购买
+                        </el-button>
                     </td>
                 </tr>
             </tbody>
@@ -51,6 +54,9 @@
             line-height: 30px;
             td{
                 text-align: center;
+                .icon{
+                    width:10px;
+                }
             }
         }
     }

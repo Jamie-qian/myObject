@@ -4,12 +4,12 @@ const allProducts = function(state) {
 }
 
 //购物车的商品
-const cartProducts = function(state){
+const cartProducts = function(state) {
     return state.cart.cartAll
 }
 
 //购物车商品总价
-const allprice = function(state){
+const allprice = function(state) {
     let products = state.cart.cartAll;
     let allprice = 0;
     //遍历获取每个产品数量和单价，获得单个产品总价
@@ -21,7 +21,7 @@ const allprice = function(state){
 }
 
 //提示信息
-const messageInfo = function(state){
+const messageInfo = function(state) {
 	return state.cart.messageInfo;
 }
 
