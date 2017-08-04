@@ -1,6 +1,6 @@
 <template>
     <div class='product'>
-         <table>
+        <table>
             <caption>产品列表</caption>
             <thead>
                 <tr>
@@ -17,8 +17,7 @@
                     <td>{{item.inventory}}</td>
                     <td>
                         <el-button @click='addToCart(item)'>
-                            <img src="../static/img/logo.png" class='icon'/>
-                            购买
+                            <img src="../static/img/logo.png" class='icon' /> 购买
                         </el-button>
                     </td>
                 </tr>
@@ -27,37 +26,37 @@
     </div>
 </template>
 <script>
-    import { mapGetters,mapActions } from 'vuex'
-    export default {
-        methods:{
-            ...mapActions({
-                addToCart: 'addToCart'
-            })
-        },
-        computed: {
-            //mapGetters辅助函数是将store中的getters映射到局部计算属性
-            ...mapGetters({  //使用对象展开符将getters混入computed中 
-                products: 'allProducts'
-            })
-        },
-        created() {
-            //调用actions
-            this.$store.dispatch('getAllProducts')
-        }
+import { mapGetters, mapActions } from 'vuex'
+export default {
+    methods: {
+        ...mapActions({
+            addToCart: 'addToCart'
+        })
+    },
+    computed: {
+        //mapGetters辅助函数是将store中的getters映射到局部计算属性
+        ...mapGetters({  //使用对象展开符将getters混入computed中 
+            products: 'allProducts'
+        })
+    },
+    created() {
+        //调用actions
+        this.$store.dispatch('getAllProducts')
     }
+}
 </script>
 <style scoped lang="scss">
-    .product {
-        table {
-            width:600px;
-            margin:50px auto;
-            line-height: 30px;
-            td{
-                text-align: center;
-                .icon{
-                    width:10px;
-                }
+.product {
+    table {
+        width: 600px;
+        margin: 50px auto;
+        line-height: 30px;
+        td {
+            text-align: center;
+            .icon {
+                width: 10px;
             }
         }
     }
+}
 </style>

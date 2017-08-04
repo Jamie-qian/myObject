@@ -4,10 +4,12 @@
     </div>
 </template>
 <script>
-    export default {
-        name:'media',
-    }
+export default {
+    name: 'media',
+}
 </script>
 <style scoped lang="scss">
-.media{padding:30px 0 0 210px;}
+.media {
+    padding: 30px 0 0 210px;
+}
 </style>

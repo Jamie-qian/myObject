@@ -4,12 +4,12 @@
     </div>
 </template>
 <script>
-    export default {
-        name:'csr'
-    }
+export default {
+    name: 'csr'
+}
 </script>
 <style scoped lang="scss">
-.csr{
-    margin-top:30px;
+.csr {
+    margin-top: 30px;
 }
 </style>

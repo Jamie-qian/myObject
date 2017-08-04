@@ -18,7 +18,7 @@
                     <td>
                         <el-button @click="deleteCartProduct(item)">
                             删除
-                            <img src="../static/img/logo.png" class='icon'/>
+                            <img src="../static/img/logo.png" class='icon' />
                         </el-button>
                     </td>
                 </tr>
@@ -28,9 +28,8 @@
             <p>总价: {{allprice}}</p>
             <p>
                 <el-button @click="submitCart">
-                    <img src="../static/img/logo.png" class='icon'/>
-                    去付款
-                    <img src="../static/img/logo.png" class='icon'/>
+                    <img src="../static/img/logo.png" class='icon' /> 去付款
+                    <img src="../static/img/logo.png" class='icon' />
                 </el-button>
             </p>
             <p>提示：{{messageInfo}}</p>
@@ -38,42 +37,42 @@
     </div>
 </template>
 <script>
-    import { mapGetters,mapActions } from 'vuex'
-    export default {
-        methods:{
-            ...mapActions({
-                deleteCartProduct: 'deleteCartProduct',
-                submitCart: 'submitCart'
-            })
-        },
-        computed:{
-            ...mapGetters({
-                products: 'cartProducts',
-                allprice: 'allprice',
-                messageInfo: 'messageInfo'
-            })
-        }
+import { mapGetters, mapActions } from 'vuex'
+export default {
+    methods: {
+        ...mapActions({
+            deleteCartProduct: 'deleteCartProduct',
+            submitCart: 'submitCart'
+        })
+    },
+    computed: {
+        ...mapGetters({
+            products: 'cartProducts',
+            allprice: 'allprice',
+            messageInfo: 'messageInfo'
+        })
     }
+}
 </script>
 
 <style scoped lang="scss">
-    .cart {
-        table {
-            width:600px;
-            margin:50px auto;
-            line-height: 30px;
-            td{
-                text-align: center;
-            }
-        }
-        .message {
-            text-align: right;
-            p {
-                margin-top:10px;
-            }
-        }
-        .icon{
-            width:10px;
+.cart {
+    table {
+        width: 600px;
+        margin: 50px auto;
+        line-height: 30px;
+        td {
+            text-align: center;
         }
     }
+    .message {
+        text-align: right;
+        p {
+            margin-top: 10px;
+        }
+    }
+    .icon {
+        width: 10px;
+    }
+}
 </style>

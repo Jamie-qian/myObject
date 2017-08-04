@@ -3,20 +3,20 @@ const state = {
 }
 
 const mutations = {
-    receive_product: function ( state, payLoad ) {
+    receive_product: function (state, payLoad) {
         state.all = payLoad  // actions  commit-> mutations
     },
 
-    add_to_cart: function ( state, payLoad) {
-        state.all.find( item => {
+    add_to_cart: function (state, payLoad) {
+        state.all.find(item => {
             return item.id === payLoad.id
-        }).inventory --
+        }).inventory--
     },
 
-    delete_cart_product: function ( state, payLoad) {
-        state.all.find( item => {
+    delete_cart_product: function (state, payLoad) {
+        state.all.find(item => {
             return item.id === payLoad.id
-        }).inventory ++
+        }).inventory++
     }
 }
 

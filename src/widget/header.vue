@@ -1,10 +1,6 @@
 <template>
     <div class="header">
-        <a 
-            v-for="(item,index) in items" 
-            :class="[item.active ? 'activeClass' : '']" 
-            :href="item.src"
-            @click="navClickEvent(items,index)">
+        <a v-for="(item,index) in items" :class="[item.active ? 'activeClass' : '']" :href="item.src" @click="navClickEvent(items,index)">
             <span>{{item.text}}</span>
         </a>
     </div>
@@ -18,67 +14,69 @@ export default {
                 {
                     text: 'HOME',
                     active: true,
-                    src:'#/'
+                    src: '#/'
                 },
                 {
                     text: 'WHO WE ARE',
                     active: false,
-                    src:'#/weare'
+                    src: '#/weare'
                 },
                 {
                     text: 'OUR NETWORKS',
                     active: false,
-                    src:'#/networks'
+                    src: '#/networks'
                 },
                 {
                     text: 'MEDIA',
                     active: false,
-                    src:'#/media'
+                    src: '#/media'
                 },
                 {
                     text: 'CSR',
                     active: false,
-                    src:'#/csr'
+                    src: '#/csr'
                 },
                 {
                     text: 'OUR PEOPLE',
                     active: false,
-                    src:'#/people'
+                    src: '#/people'
                 },
                 {
                     text: 'CONTACT',
                     active: false,
-                    src:'#/contact'
+                    src: '#/contact'
                 }
             ]
         }
     },
-    methods:{
-        navClickEvent (items,index){
-            /*默认切换类的操作*/ 
-            items.forEach(el =>{
+    methods: {
+        navClickEvent(items, index) {
+            /*默认切换类的操作*/
+            items.forEach(el => {
                 el.active = false;
             })
             items[index].active = true;
             /*开放用户自定义的接口*/
-            this.$emit('navClickEvent',items,index);
+            this.$emit('navClickEvent', items, index);
         }
     }
 }
 </script>
 <style scoped lang="scss">
 .header {
-    width:100%;background: #999;
+    width: 100%;
+    background: #999;
     a {
         display: inline-block;
         color: #666;
         span {
-            padding:8px 30px;display: inline-block;
+            padding: 8px 30px;
+            display: inline-block;
         }
     }
     .activeClass {
         color: #fff;
-        border-bottom:3px solid #ccc;
+        border-bottom: 3px solid #ccc;
     }
 }
 </style>

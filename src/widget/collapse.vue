@@ -24,7 +24,7 @@
 </template>
 <script>
 export default {
-    name:'collapse',
+    name: 'collapse',
     data() {
         return {
             activeName: '1'

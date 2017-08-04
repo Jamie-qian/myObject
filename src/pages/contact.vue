@@ -4,10 +4,12 @@
     </div>
 </template>
 <script>
-    export default {
-        name:'contact'
-    }
+export default {
+    name: 'contact'
+}
 </script>
 <style scoped lang="scss">
-    .contact{margin-top:30px;}
+.contact {
+    margin-top: 30px;
+}
 </style>

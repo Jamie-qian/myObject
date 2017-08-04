@@ -8,7 +8,7 @@ const productsData = [
 ]
 
 export default {
-    getProductsData: function(callback) {
+    getProductsData: function (callback) {
         setTimeout(callback(productsData), 300)
     }
 }

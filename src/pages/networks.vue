@@ -5,12 +5,12 @@
     </div>
 </template>
 <script>
-    export default {
-        name:'networks'
-    }
+export default {
+    name: 'networks'
+}
 </script>
 <style scoped lang="scss">
-.networks{
-    margin-top:30px;
+.networks {
+    margin-top: 30px;
 }
 </style>
