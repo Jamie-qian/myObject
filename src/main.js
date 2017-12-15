@@ -2,7 +2,7 @@ import Vue from 'vue'
 /*引入App这个组件*/
 import App from './App'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import 'element-ui/lib/theme-chalk/index.css'
 /*引入路由配置*/
 import router from './router/router'
 
