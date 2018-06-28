@@ -1,13 +1,13 @@
 <template>
-    <div class="header">
-        <a v-for="(item,index) in items" :class="[item.active ? 'activeClass' : '']" :href="item.src" @click="navClickEvent(items,index)">
+    <div class="container">
+        <a v-for="(item,index) in items" :class="[item.active ? 'activeClass' : '']" :href="item.src" @click="navClickEvent(items,index)" :key="item.id">
             <span>{{item.text}}</span>
         </a>
     </div>
 </template>
 <script>
 export default {
-    name: 'header',
+    name: 'public-header',
     data() {
         return {
             items: [
@@ -42,7 +42,7 @@ export default {
                     src: '#/people'
                 },
                 {
-                    text: 'CONTACT',
+                    text: 'JING TAO',
                     active: false,
                     src: '#/contact'
                 }
@@ -63,7 +63,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.header {
+.container {
     width: 100%;
     background: #999;
     a {
