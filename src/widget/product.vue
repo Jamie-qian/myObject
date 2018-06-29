@@ -11,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for='item in products'>
+                <tr v-for='item in products' :key="item.id">
                     <td>{{item.title}}</td>
                     <td>{{item.price}}</td>
                     <td>{{item.inventory}}</td>
@@ -26,37 +26,38 @@
     </div>
 </template>
 <script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-    methods: {
-        ...mapActions({
-            addToCart: 'addToCart'
-        })
-    },
-    computed: {
-        //mapGetters辅助函数是将store中的getters映射到局部计算属性
-        ...mapGetters({  //使用对象展开符将getters混入computed中 
-            products: 'allProducts'
-        })
-    },
-    created() {
-        //调用actions
-        this.$store.dispatch('getAllProducts')
+    import { mapGetters, mapActions } from 'vuex'
+
+    export default {
+        methods: {
+            ...mapActions({
+                addToCart: 'addToCart'
+            })
+        },
+        computed: {
+            //mapGetters辅助函数是将store中的getters映射到局部计算属性
+            ...mapGetters({  //使用对象展开符将getters混入computed中 
+                products: 'allProducts'
+            })
+        },
+        created() {
+            //调用actions
+            this.$store.dispatch('getAllProducts')
+        }
     }
-}
 </script>
 <style scoped lang="scss">
-.product {
-    table {
-        width: 600px;
-        margin: 50px auto;
-        line-height: 30px;
-        td {
-            text-align: center;
-            .icon {
-                width: 10px;
+    .product {
+        table {
+            width: 600px;
+            margin: 50px auto;
+            line-height: 30px;
+            td {
+                text-align: center;
+                .icon {
+                    width: 10px;
+                }
             }
         }
     }
-}
 </style>

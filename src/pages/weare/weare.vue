@@ -1,7 +1,7 @@
 <template>
     <div class="weare">
         <c-btn v-on:btnClickEvent="doSthOne" msg="确定">
-            <img slot="icon" src="../../static/img/logo.png" class="icon" />
+            <img slot="icon" src="../../static/img/logo.png" class="icon"/>
         </c-btn>
         <c-btn v-on:btnClickEvent="doSthTwo" msg="取消">
             <img slot="icon" src="../../static/img/logo.png" class="icon">
@@ -23,10 +23,10 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.weare {
-    margin-top: 30px;
-    .icon {
-        width: 10px;
+    .weare {
+        margin-top: 30px;
+        .icon {
+            width: 10px;
+        }
     }
-}
 </style>
