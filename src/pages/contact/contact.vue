@@ -9,6 +9,11 @@
         </el-table>
         <el-pagination 
             style="margin-top:20px;"
+            @size-change="handleSizeChange"
+            :current-page="currentPage"
+            @current-change="handleCurrentChange"
+            :page-sizes="[5, 10, 15]"
+            :page-size="5"
             layout="total, sizes, prev, pager, next, jumper"
             :total="this.model.tableDate.length"></el-pagination>
     </div>
@@ -22,13 +27,21 @@
         },
         data(){
             return {
-                
+                currentPage: 4
             }
         },
         computed:{
             ...mapState({
                 model:'contact'
             }),
+        },
+        methods:{
+            handleSizeChange(val) {
+                alert(`每页 ${val} 条`);
+            },
+            handleCurrentChange(val) {
+                alert(`当前页: ${val}`);
+            }
         }
     }
 </script>
