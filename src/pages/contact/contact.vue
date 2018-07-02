@@ -2,7 +2,7 @@
     <div class="contact">
         <!-- 调用组件 -->
         <!-- <c-collapse></c-collapse> -->
-        <el-table :data="model.tableDate" border>
+        <el-table :data="model.tableDate" border v-loading="loading">
             <el-table-column prop="date" label="日期"></el-table-column>
             <el-table-column prop="name" label="姓名"></el-table-column>
             <el-table-column prop="address" label="地址"></el-table-column>
@@ -27,7 +27,8 @@
         },
         data(){
             return {
-                currentPage: 4
+                currentPage: 4,
+                loading: true
             }
         },
         computed:{
@@ -41,6 +42,10 @@
             },
             handleCurrentChange(val) {
                 alert(`当前页: ${val}`);
+            },
+            load(){
+                this.loading = true;
+                
             }
         }
     }
