@@ -27,7 +27,6 @@
                     <el-tag type="info">{{scope.row.address}}</el-tag>
                 </template>
             </el-table-column>
-            
         </el-table>
         <el-pagination 
             style="margin-top:20px;"

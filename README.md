@@ -25,7 +25,7 @@ npm install
 
 启动服务
 ```
-npm run dev
+npm run dev 或者 yarn start
 ```
 
 打包发布
